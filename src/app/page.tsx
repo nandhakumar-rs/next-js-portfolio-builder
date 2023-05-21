@@ -9,7 +9,7 @@ export default function Home() {
       <Header />
       <UserForm />
 
-      <div className="pl-[450px] pt-[100px] pr-20 pb-8 h-full w-full">
+      <div className="pl-[450px] bg-slate-100 pt-[100px] pr-20 pb-8 h-scree w-full">
         <Portfolio />
       </div>
     </main>
