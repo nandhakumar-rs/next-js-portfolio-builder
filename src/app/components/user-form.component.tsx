@@ -103,7 +103,7 @@ const UserForm = () => {
         labelTwo="Specialization"
         onChange={(key, value) => setData({ [key]: value })}
       />
-      <FormHeader label="Customization" />
+      {/* <FormHeader label="Customization" /> */}
       {/* <FormInput
         label="Theme (in Hex Eg: #D7C6F4)"
         keyProp="theme"
