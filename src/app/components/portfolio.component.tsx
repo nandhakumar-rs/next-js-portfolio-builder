@@ -8,11 +8,11 @@ const Portfolio = () => {
 
   return (
     <div className="w-full h-full bg-white max-w-[1000px] mx-auto">
-      <div className={`h-[200px] flex flex-col justify-center px-10 bg-gradient-to-b  from-[${data?.theme?.toString()}] to-[#FFFFFF]`}>
+      <div className={`h-[200px] flex flex-col justify-center px-10 bg-gradient-to-b  from-[#D7C6F4] to-[#FFFFFF]`}>
         <div className="self-start">
             
           <p className="text-gray-700 font-semi-bold m-0 mb-1">
-            {data?.role || 'A Full Stack developer'} {data.theme}
+            {data?.role || 'A Full Stack developer'}
           </p>
           <p className="text-gray-950 text-5xl font-bold m-0">
             {data?.name || 'Santhoshkumar Srinivasan'}
@@ -108,7 +108,7 @@ const Portfolio = () => {
           <p className="text-4xl min-w-[276px] max-w-[276px] text-gray-950 font-bold ">
             Projects
           </p>
-          <div>
+          <div className='w-full'>
             <p className="text-lg font-bold text-[#5B5C5F] mb-2 mt-0">
               {data?.projectOne?.title || 'Space Exploration'}
             </p>
@@ -118,7 +118,7 @@ const Portfolio = () => {
             </p>
           </div>
           {data?.projectTwo?.title && (
-            <div>
+            <div className='w-full'>
               <p className="text-lg font-bold text-[#5B5C5F] mb-2 mt-0">
                 {data?.projectTwo?.title || 'Space Exploration'}
               </p>
@@ -134,18 +134,18 @@ const Portfolio = () => {
           <p className="text-4xl min-w-[276px] max-w-[276px] text-gray-950 font-bold ">
             Education
           </p>
-          <div>
+          <div className='w-full'>
             <p className="text-lg font-bold text-[#5B5C5F] mb-2 mt-0">
-              {data?.educationOne?.university || 'Space Exploration'}
+              {data?.educationOne?.university || 'KGISL Institute Of Technology (2020 - 2024)'}
             </p>
             <p className="text-[#5B5C5F] text-lg m-0">
               {data?.educationOne?.specialization ||
-                `Landing page to explore planets in space, the goal is to build an interactive and user-friendly user interface with a good transition effect`}
+                `Bachelor of Engineering Specialised in Computer Science`}
             </p>
           </div>
 
           {data?.educationTwo?.university && (
-            <div>
+            <div className='w-full'>
               <p className="text-lg font-bold text-[#5B5C5F] mb-2 mt-0">
                 {data?.educationTwo?.university || 'KGISL Institute Of Technology'}
               </p>

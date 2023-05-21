@@ -104,11 +104,11 @@ const UserForm = () => {
         onChange={(key, value) => setData({ [key]: value })}
       />
       <FormHeader label="Customization" />
-      <FormInput
+      {/* <FormInput
         label="Theme (in Hex Eg: #D7C6F4)"
         keyProp="theme"
         onChange={(key, value) => setData({ [key]: value })}
-      />{' '}
+      />{' '} */}
       <div className="pb-8" />
     </main>
   )
