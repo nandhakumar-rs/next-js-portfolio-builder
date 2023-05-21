@@ -28,7 +28,7 @@ const Portfolio = () => {
             <a href={data.linkedIn} target="_blank">
               <Image
                 alt="github"
-                src={'/smartphone.svg'}
+                src={'/linkedin.svg'}
                 width={24}
                 height={24}
               />
@@ -41,7 +41,7 @@ const Portfolio = () => {
           )}
           {data?.phone && (
             <a href={`tel:${data?.phone}`} target="_blank">
-              <Image alt="github" src={'/phone.svg'} width={24} height={24} />
+              <Image alt="github" src={'/smartphone.svg'} width={24} height={24} />
             </a>
           )}
         </div>
