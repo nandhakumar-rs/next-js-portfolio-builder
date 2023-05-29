@@ -28,8 +28,11 @@ const PortfolioPage = () => {
     }
   }, [portfolios, id])
   return (
-    <div className="h-screen w-screen flex flex-col justify-center items-center bg-slate-100 py-10">
-      <Portfolio />
+    <div className="h-screen overflow-y-scroll w-screen flex flex-col justify-center items-center bg-slate-100">
+     <div className='mt-80'>
+     <Portfolio />
+     </div>
+   
     </div>
   )
 }

@@ -1,14 +1,15 @@
 'use client'
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect } from 'react'
 import usePortfolioStore from '../store'
 
 const Portfolio = () => {
   const { data, } = usePortfolioStore()
 
   return (
-    <div className="w-full h-full bg-white max-w-[1000px] mx-auto">
-      <div className={`h-[200px] flex flex-col justify-center px-10 bg-gradient-to-b  from-[#D7C6F4] to-[#FFFFFF]`}>
+    <div className="w-full bg-white max-w-[1000px] mx-auto my-20">
+      <div  className={`h-[200px] flex flex-col justify-center px-10`} 
+      style={{background: `linear-gradient(180deg, ${data.theme} 0%, rgba(255,255,255,1) 75%)`}}>
         <div className="self-start">
             
           <p className="text-gray-700 font-semi-bold m-0 mb-1">
@@ -64,7 +65,7 @@ const Portfolio = () => {
           <p className="text-4xl min-w-[276px] max-w-[276px] text-gray-950 font-bold ">
             Skills
           </p>
-          <div className="flex w-full gap-4">
+          <div className="flex w-full gap-4 flex-wrap">
             {data?.skills ? (
               data.skills.map((tool: string, index: number) => (
                 <p
@@ -86,7 +87,7 @@ const Portfolio = () => {
           <p className="text-4xl min-w-[276px] max-w-[276px] text-gray-950 font-bold ">
             Tools & Technology
           </p>
-          <div className="flex w-full gap-4">
+          <div className="flex w-full gap-4 flex-wrap">
             {data?.tools ? (
               data.tools.map((tool: string, index: number) => (
                 <p

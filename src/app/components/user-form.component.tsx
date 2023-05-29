@@ -13,6 +13,7 @@ import { useCollection } from 'react-firebase-hooks/firestore'
 import { collection, orderBy, query } from 'firebase/firestore'
 import { db } from '@/lib/firebase'
 import { useRouter } from 'next/navigation'
+import { ColorResult, SketchPicker } from 'react-color'
 
 const UserForm = () => {
   const { setData, data, setPortfolioId, portfolioId } = usePortfolioStore()
@@ -21,10 +22,7 @@ const UserForm = () => {
   const { push } = useRouter()
 
   const [portfolios] = useCollection(
-    query(
-      collection(db, `portfolio`),
-      orderBy('createdAt', 'desc'),
-    ),
+    query(collection(db, `portfolio`), orderBy('createdAt', 'desc')),
   )
 
   useEffect(() => {
@@ -137,7 +135,16 @@ const UserForm = () => {
           labelOne="University"
           labelTwo="Specialization"
           onChange={(key, value) => setData({ [key]: value })}
-        />{' '}
+        />
+        <FormHeader label="Theme" />
+        <div className="flex">
+          <SketchPicker
+            className="w-full"
+            color={data.theme}
+            onChange={(color: ColorResult) => setData({ theme: color.hex })}
+          />
+        </div>
+
         <button
           onClick={async () => {
             console.log(portfolioId)
