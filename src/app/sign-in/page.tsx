@@ -11,7 +11,7 @@ const SignInPage = () => {
 
   return (
     <div className="h-screen w-screen flex flex-col justify-center items-center bg-white">
-      <h1 className="text-4xl text-gray-400 font-bold">
+      <h1 className="text-4xl text-gray-400 font-bold mb-4">
         Pro<span className="text-gray-800">Dy</span>
       </h1>
       <button
