@@ -10,7 +10,7 @@ function withAuth(Component: ComponentType) {
     useEffect(() => {
       if (user === null) {
         console.log('yes')
-        router.replace('/')
+        router.replace('/sign-in')
       }
     }, [user, router])
 
