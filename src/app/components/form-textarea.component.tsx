@@ -5,12 +5,14 @@ const FormTextarea = ({
   label,
   keyProp,
   onChange,
+  defaultValue = '',
 }: {
   label: string
+  defaultValue?: string
   keyProp: string
   onChange?: (keyProp: string, value: string) => void
 }) => {
-  const [value, setValue] = useState('')
+  const [value, setValue] = useState(defaultValue)
 
   return (
     <div>

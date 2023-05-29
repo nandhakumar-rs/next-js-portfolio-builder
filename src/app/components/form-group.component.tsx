@@ -11,6 +11,7 @@ const FormGroup = ({
   labelTwo,
   keyTwo,
   name,
+  defaultValue = {},
 }: {
   labelTwo: string
   labelOne: string
@@ -18,15 +19,15 @@ const FormGroup = ({
   keyOne: string
   keyTwo: string
   name: string
+  defaultValue?: any
 }) => {
-  const [value, setValue] = useState({
-
-  })
+  const [value, setValue] = useState({})
 
   return (
     <div className="flex flex-col gap-4 mt-4 mb-4">
       <div className="flex flex-col gap-4">
         <FormInput
+          defaultValue={defaultValue[keyOne]}
           label={labelOne}
           keyProp={keyOne}
           onChange={(key, changeValue) => {
@@ -39,6 +40,7 @@ const FormGroup = ({
       </div>
       <div className="flex flex-col gap-4">
         <FormTextarea
+          defaultValue={defaultValue[keyTwo]}
           label={labelTwo}
           keyProp={keyTwo}
           onChange={(key, changeValue) => {

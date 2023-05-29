@@ -1,6 +1,7 @@
 import './globals.css'
 import { Inter, Space_Grotesk } from 'next/font/google'
 import 'antd/dist/reset.css'
+import { AuthProvider } from '@/provider/auth.provider'
 
 const inter = Inter({ subsets: ['latin'] })
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'] })
@@ -17,7 +18,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={spaceGrotesk.className}>{children}</body>
+      <body className={spaceGrotesk.className}>
+        <AuthProvider> {children}</AuthProvider>
+      </body>
     </html>
   )
 }

@@ -4,7 +4,7 @@ import React from 'react'
 import usePortfolioStore from '../store'
 
 const Portfolio = () => {
-  const { data } = usePortfolioStore()
+  const { data, } = usePortfolioStore()
 
   return (
     <div className="w-full h-full bg-white max-w-[1000px] mx-auto">
@@ -12,10 +12,10 @@ const Portfolio = () => {
         <div className="self-start">
             
           <p className="text-gray-700 font-semi-bold m-0 mb-1">
-            {data?.role || 'A Full Stack developer'}
+            A {data?.role}
           </p>
           <p className="text-gray-950 text-5xl font-bold m-0">
-            {data?.name || 'Santhoshkumar Srinivasan'}
+            {data?.name}
           </p>
         </div>
         <div className="self-end mt-6 flex gap-4">

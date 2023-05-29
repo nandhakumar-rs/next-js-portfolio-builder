@@ -10,9 +10,11 @@ const FormMultiSelect = ({
   onChange,
   keyProp,
   label,
+  defaultValue = [],
 }: {
   label: string
   options: string[]
+  defaultValue?: any[]
   onChange?: (keyProp: string, value: string) => void
   keyProp: string
 }) => {
@@ -20,6 +22,7 @@ const FormMultiSelect = ({
     <div className="mb-4">
       <p className="m-0 text-gray-800 text-sm "> {label}</p>
       <Select
+        defaultValue={defaultValue}
         className="mt-2 w-full border rounded-md border-gray-300 h-max"
         classNamePrefix="react-select"
         styles={{
@@ -34,7 +37,10 @@ const FormMultiSelect = ({
         components={animatedComponents}
         onChange={(event: any) => {
           if (onChange) {
-            onChange(keyProp, event.map((ev:any) => ev.value))
+            onChange(
+              keyProp,
+              event.map((ev: any) => ev.value),
+            )
           }
         }}
         isMulti
